@@ -121,8 +121,13 @@ function M2020 () {
      */
     self.build = function () {
         return {
+            /**
+             * Element standing for /Discover Menu
+             * @return {{expend: (function(): *), display: (function(): *), collect: (function(): *)}}
+             */
             menu: function () {
                 return {
+                    // Expend Button
                     expend: function () {
                         let oExpandButton = {
                             name: 'button',
@@ -136,6 +141,7 @@ function M2020 () {
                         return self._htmlelements.menu.expend = HTML().compose(oExpandButton);
                     },
 
+                    // Data Collect Button
                     collect: function(){
                         let oCollectButton = {
                             name: 'button',
@@ -149,6 +155,7 @@ function M2020 () {
                         return self._htmlelements.menu.collect = HTML().compose(oCollectButton);
                     },
 
+                    // Display Report Button
                     display: function () {
                         let oDisplayButton = {
                             name: 'button',
@@ -164,10 +171,7 @@ function M2020 () {
                 }
             },
 
-            overlay: function () {
-
-            },
-
+            // Build Report (UCS List & Errors List)
             report: function () {
                 // UCS Table Report
                 let oUcsTable = {
@@ -220,6 +224,13 @@ function M2020 () {
                 return self._htmlelements.report.root = new HTML().compose(oReport)
             },
 
+            /**
+             * Build Row for UCS List Table.
+             *
+             * @param {Object}  $oUcsData  UCS Data
+             *
+             * @return {HTMLElement}
+             */
             ucsRow: function ($oUcsData) {
                 let sInitialStatusClass = $oUcsData.status.toLowerCase();
                 let sFinalStatusClass = $oUcsData.resolveStatus.toLowerCase();
@@ -257,8 +268,14 @@ function M2020 () {
                 return new HTML().compose(oUcsRow);
             },
 
+            /**
+             * Build Row for Error List table.
+             *
+             * @param {Object} $oErrorData
+             *
+             * @return {HTMLElement}
+             */
             errorRow: function ($oErrorData) {
-                console.log($oErrorData);
                 // List of Error message
                 let oErrorList = {
                     name: 'ul', children: []
@@ -309,10 +326,12 @@ function M2020 () {
      * Perform log detail expend to trigger data loading.
      */
     self.expend = function () {
+        // Click on all expand button available on the screen
         self._hosts.table.querySelectorAll(self._selectors.others.expendButton).forEach(function ($oButton) {
             $oButton.click();
         });
 
+        // Toggle Expended flag & update button text
         self._bExpended = (!self._bExpended);
         self._htmlelements.menu.expend.textContent = (self._bExpended) ? 'Fold' : 'Expand';
     };
@@ -321,18 +340,17 @@ function M2020 () {
      * Read table result according to filters set.
      */
     self.collect = function () {
+        // Log entry fields to collect
         let aFields = ['_id', 'request', 'response'];
 
         // Close before reopening to reload data (if timerange changed)
         if (!self._bExpended) {
             self.expend();
         }
-
         self.expend();
 
-        let cRowData = self._hosts.table.querySelectorAll(self._selectors.others.rowData);
-
-        cRowData.forEach(function ($oRow) {
+        // Read all logs entries
+        self._hosts.table.querySelectorAll(self._selectors.others.rowData).forEach(function ($oRow) {
             let oRowData = {};
             let cFields = $oRow.querySelectorAll('table tr');
 
@@ -361,6 +379,7 @@ function M2020 () {
      * @return {null|*}
      */
     self.consolidate = function () {
+        // Initialize Consolidated Data if not exist.
         if (!self._consolidateData) {
             self._consolidateData = {
                 id: [],
@@ -374,17 +393,18 @@ function M2020 () {
             }
         }
 
-        // Clear reports
+        // Clear reports data
         self._consolidateData.reports.ucs = {};
         self._consolidateData.reports.errors = {};
 
         // Parse Data
         self._data.forEach(function ($oData) {
+            // Collected Data
             let sId = $oData._id;
             let sRequest = $oData.request;
             let sResponse = $oData.response;
 
-            // @TODO : Bug fxparser quand replay via l'instance (pb d'instance ?)
+            // Engine for parsing
             let oRequest = new fxparser.XMLParser(self._xmlParserOptions).parse(sRequest);
             let oResponse = new fxparser.XMLParser(self._xmlParserOptions).parse(sResponse);
 
@@ -401,8 +421,6 @@ function M2020 () {
             let sReturnMessage = self.getXmlNode(oResponse, self._xmlPaths.response.returnMessage);
 
             let messageIndex = self._consolidateData.messages.length;
-
-            //console.log(sLoginName, oInputParams, sReturnCode, sReturnMessage);
 
 
             // Collect / update parsed data
@@ -527,9 +545,6 @@ function M2020 () {
             }
         }
 
-        //console.log(self._consolidateData);
-        window.AAA = self._consolidateData;
-
         return self._consolidateData;
     };
 
@@ -547,6 +562,7 @@ function M2020 () {
             self._responseLocation = document.location.href;
         }
 
+        // Initial call generates URL to update Kibana filters & trigger logs refresh
         if ($bInitialCall) {
             // Refresh URL Location
             let sLocation = self._responseLocation;
@@ -563,12 +579,12 @@ function M2020 () {
             }.bind(this), 250);
         }
 
-        // Continue execution
+        // Continue execution next to setTimeout.
         if (!$bInitialCall) {
             // Check if loading if finished
             let oLoadingElement = document.querySelector(self._selectors.others.loading);
 
-            // Recollect Data + Update
+            // Recollect Data (table updated) + Update
             if (oLoadingElement.classList.contains('hidden')) {
                 self._consolidateData.ucs[$sUcs].resolved = true;
                 self.display();
