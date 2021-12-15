@@ -24,18 +24,19 @@
         margin: 5px 0;
 
         tr {
+            background: #e4ecfa;
+
             th {
                 border: 1px solid black;
                 padding: 2px 4px;
                 background: #006BB4;
                 color: white;
-                font-size: 1.2rem;
+                //font-size: 1.1rem;
             }
 
             td {
                 border: 1px solid black;
                 padding: 2px 4px;
-                background: #d6ebfa;
 
                 &.error {
                     font-weight: bold;
@@ -48,7 +49,7 @@
             }
 
             &:nth-child(even) {
-                background: #c1e6fa;
+                background: #d6f2fa;
             }
         }
     }
@@ -66,6 +67,30 @@
     }
 
     #table-error-list {
-
+        tr {
+            td {
+                table {
+                    th {
+                        background: #02b45c;
+                        font-size: 1rem;
+                        padding: 1px 2px;
+                    }
+                    td {
+                        font-size: 0.9rem;
+                        padding: 1px 2px;
+                    }
+                }
+            }
+            td:nth-child(1) {
+                text-align: center;
+            }
+            td:nth-child(2) {
+                max-width: 200px;
+            }
+            // Reset Padding in cell which contains a table
+            td:nth-child(3) {
+                padding: 0;
+            }
+        }
     }
 }
