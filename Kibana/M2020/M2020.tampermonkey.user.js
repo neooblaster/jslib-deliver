@@ -12,7 +12,7 @@
 // @require      https://rawcdn.githack.com/neooblaster/HTML/aa9263b08705a9676416f2ba64b474daa3a62945/release/v1.4.0/HTML.min.js
 // @require      https://cdn.jsdelivr.net/npm/less@4.1.1
 // @require      https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/4.0.0-beta.8/fxparser.min.js
-// @require      https://raw.githack.com/neooblaster/jslib-deliver/LESS_DEV/Kibana/M2020/M2020.user.js
+// @require      https://raw.githack.com/neooblaster/jslib-deliver/master/Kibana/M2020/M2020.user.js
 // ==/UserScript==
 (function() {
     'use strict';
@@ -36,7 +36,7 @@
                 attributes: {
                     rel: 'stylesheet/less',
                     type: 'text/css',
-                    href: `https://raw.githubusercontent.com/neooblaster/jslib-deliver/LESS_DEV/Kibana/M2020/stylesheet.less?ts=${new Date().getTime()}1`
+                    href: `https://raw.githubusercontent.com/neooblaster/jslib-deliver/master/Kibana/M2020/stylesheet.less?ts=${new Date().getTime()}1`
                 },
                 properties: {
                     onload: function(){
