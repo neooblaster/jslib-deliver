@@ -1,0 +1,248 @@
+{
+    "ucs": {
+        "SE202149426770": {
+            "status": "ERROR",
+            "messages": [
+                0,
+                1
+            ]
+        },
+        "SE202149426771": {
+            "status": "ERROR",
+            "messages": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        "SE202149426291": {
+            "status": "ERROR",
+            "messages": [
+                7,
+                8,
+                9
+            ]
+        },
+        "P0711297003": {
+            "status": "ERROR",
+            "messages": [
+                10
+            ]
+        },
+        "P0711297002": {
+            "status": "ERROR",
+            "messages": [
+                11
+            ]
+        },
+        "SP202147006356": {
+            "status": "ERROR",
+            "messages": [
+                12
+            ]
+        },
+        "SP202149011181": {
+            "status": "ERROR",
+            "messages": [
+                13,
+                14
+            ]
+        },
+        "SP202149011182": {
+            "status": "ERROR",
+            "messages": [
+                15,
+                16,
+                17
+            ]
+        }
+    },
+    "prodord": {
+        "30009808": {
+            "completeQuantity": 1,
+            "ucs": [
+                "P0711297002"
+            ]
+        },
+        "30009837": {
+            "completeQuantity": 1,
+            "ucs": [
+                "P0711297003"
+            ]
+        },
+        "30055218": {
+            "completeQuantity": 4,
+            "ucs": [
+                "SP202147006356"
+            ]
+        },
+        "30056221": {
+            "completeQuantity": 5,
+            "ucs": [
+                "SE202149426291"
+            ]
+        },
+        "30063476": {
+            "completeQuantity": 3,
+            "ucs": [
+                "SP202149011181",
+                "SP202149011182"
+            ]
+        },
+        "30064698": {
+            "completeQuantity": 1,
+            "ucs": [
+                "SE202149426770",
+                "SE202149426771"
+            ]
+        }
+    },
+    "messages": [
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30064698 is already being processed by ITANISAMI",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30064698,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202149426770"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30064698 is already being processed by ITANISAMI",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30064698,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202149426770"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30064698 is already being processed by ITANISAMI",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30064698,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202149426771"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30064698 is already being processed by ITANISAMI",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30064698,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202149426771"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30064698 is already being processed by ITANISAMI",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30064698,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202149426771"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30064698 is already being processed by ITANISAMI",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30064698,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202149426771"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30064698 is already being processed by ITANISAMI",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30064698,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202149426771"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000819294 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30056221,
+            "completeQuantity": 5,
+            "ucsNumber": "SE202149426291"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000819294 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30056221,
+            "completeQuantity": 5,
+            "ucsNumber": "SE202149426291"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: com.sap.xmii.Illuminator.logging.LHException: com.sap.sql.exception.OpenSQLException: Transaction (Process ID 78) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. \\n\\tOpenSQLExceptionCategories: [TRANSIENT, TRANSACTION_ROLLBACK]",
+            "messagePattern": "Error: com.sap.xmii.Illuminator.logging.[0-9]+xception: com.sap.sql.exception.Open[0-9]+xception: Transaction (Process [0-9]+ [0-9]+) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. \\n\\tOpen[0-9]+xceptionCategories: [[0-9]+, [0-9]+_[0-9]+]",
+            "prodOrder": 30056221,
+            "completeQuantity": 5,
+            "ucsNumber": "SE202149426291"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000338932 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30009837,
+            "completeQuantity": 1,
+            "ucsNumber": "P0711297003"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000335910 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30009808,
+            "completeQuantity": 1,
+            "ucsNumber": "P0711297002"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error:",
+            "messagePattern": "Error:",
+            "prodOrder": 30055218,
+            "completeQuantity": 4,
+            "ucsNumber": "SP202147006356"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30063476 is already being processed by BARTHELDE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30063476,
+            "completeQuantity": 3,
+            "ucsNumber": "SP202149011181"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30063476 is already being processed by BARTHELDE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30063476,
+            "completeQuantity": 3,
+            "ucsNumber": "SP202149011181"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30063476 is already being processed by BARTHELDE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30063476,
+            "completeQuantity": 3,
+            "ucsNumber": "SP202149011182"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30063476 is already being processed by BARTHELDE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30063476,
+            "completeQuantity": 3,
+            "ucsNumber": "SP202149011182"
+        },
+        {
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30063476 is already being processed by BARTHELDE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30063476,
+            "completeQuantity": 3,
+            "ucsNumber": "SP202149011182"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+https://kibana.xxx.net:5601/s/integration/app/kibana#/discover/d9788140-59c7-11ec-9ba3-a392ce8329f3
+
+?_g=(
+    refreshInterval:(
+        pause:!t,
+        value:0
+    ),
+    time:(
+        from:now-1d%2Fd,
+        mode:quick,
+        to:now-1d%2Fd
+    )
+)
+
+&_a=(
+    columns:!(_source),
+    filters:!((
+        '$state':(store:appState),
+        meta:(
+            alias:!n,disabled:!f,
+            index:AW35DAbv8VOwPLJzbS0C,
+            key:apiName,
+            negate:!f,
+            params:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase),
+            type:phrase,value:SAP_TTAGREGATIONUCSCOMPLETE
+        ),
+        query:(
+            match:(apiName:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase)))
+        ),
+        (
+            '$state':(store:appState),
+            meta:(
+                alias:!n,disabled:!f,
+                index:AW35DAbv8VOwPLJzbS0C,
+                key:response,
+                negate:!f,
+                params:(query:'999',type:phrase),type:phrase,value:'999'
+            ),
+            query:(
+                match:(response:(query:'999',type:phrase))
+            )
+        )
+    ),
+    index:AW35DAbv8VOwPLJzbS0C,interval:auto,query:(language:kuery,query:''),sort:!(creationDate,desc)
+)

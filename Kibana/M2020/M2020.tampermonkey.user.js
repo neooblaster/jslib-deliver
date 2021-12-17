@@ -40,7 +40,6 @@
                 },
                 properties: {
                     onload: function(){
-                        console.log("LESS LOADED")
                         // Apply newly loaded stylesheet
                         less.registerStylesheets();
                         less.refresh();

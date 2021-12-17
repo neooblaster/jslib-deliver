@@ -138,7 +138,7 @@ function M2020 () {
                             }
                         };
 
-                        return self._htmlelements.menu.expend = HTML().compose(oExpandButton);
+                        return self._htmlelements.menu.expend = new HTML().compose(oExpandButton);
                     },
 
                     // Data Collect Button
@@ -152,7 +152,7 @@ function M2020 () {
                             }
                         };
 
-                        return self._htmlelements.menu.collect = HTML().compose(oCollectButton);
+                        return self._htmlelements.menu.collect = new HTML().compose(oCollectButton);
                     },
 
                     // Display Report Button
@@ -166,7 +166,7 @@ function M2020 () {
                             }
                         };
 
-                        return self._htmlelements.menu.display =new HTML().compose(oDisplayButton);
+                        return self._htmlelements.menu.display = new HTML().compose(oDisplayButton);
                     }
                 }
             },
@@ -696,9 +696,6 @@ function M2020 () {
         oRefElement.parentNode.insertBefore(self.build().menu().expend(), oRefElement);
         oRefElement.parentNode.insertBefore(self.build().menu().collect(), oRefElement);
         oRefElement.parentNode.insertBefore(self.build().menu().display(), oRefElement);
-
-        // Configure XML Parser
-        self._xmlParser = new fxparser.XMLParser(self._xmlParserOptions);
 
         return self;
     };
