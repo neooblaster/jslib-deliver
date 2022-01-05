@@ -1,99 +1,148 @@
 @report_width: 400px;
 
+@font-face {
+    font-family: 'SAP';
+    src: url('https://sapui5.hana.ondemand.com/resources/sap/ui/core/themes/base/fonts/SAP-icons.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
-#m2020-report {
-    display: block;
-    position: fixed;
-    z-index: 999;
-    bottom: 0;
-    right: 0;
-    max-height: 70%;
-    overflow: auto;
-    border: 1px solid #D3DAE6;
-    padding: 20px;
-    background: #F5F7FA;
+#m2020 {
+    &-report {
+        display: block;
+        position: fixed;
+        z-index: 999;
+        right: calc(~'50% - 400px');
+        bottom: 25px;
+        max-height: 70%;
+        width: 800px;
+        overflow: auto;
+        border: 1px solid #D3DAE6;
+        padding: 20px;
+        background: #F5F7FA;
+        box-shadow: 2px 2px 6px black, -2px -2px 6px black, 2px -2px 6px black, -2px 2px 6px black;
+        border-radius: 4px;
 
-    h2 {
-        &:after {
-            content: " :";
-        }
-    }
-
-    table {
-        border: 1px solid black;
-        border-collapse: collapse;
-        margin: 5px 0;
-
-        tr {
-            background: #e4ecfa;
-
-            th {
-                border: 1px solid black;
-                padding: 2px 4px;
-                background: #006BB4;
-                color: white;
-                //font-size: 1.1rem;
-            }
-
-            td {
-                border: 1px solid black;
-                padding: 2px 4px;
-
-                &.error {
-                    font-weight: bold;
-                    color: red;
-                }
-                &.success {
-                    font-weight: bold;
-                    color: forestgreen;
-                }
-            }
-
-            &:nth-child(even) {
-                background: #f0fafa;
+        h2 {
+            &:after {
+                content: " :";
             }
         }
-    }
 
-    #table-ucs-list {
-        tr {
-            td {
-                &:nth-child(2),
-                &:nth-child(3),
-                &:nth-child(4) {
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 5px 0;
+
+            tr {
+                background: #e4ecfa;
+
+                th {
+                    border: 1px solid black;
+                    padding: 2px 4px;
+                    background: #006BB4;
+                    color: white;
+                    //font-size: 1.1rem;
+                }
+
+                td {
+                    border: 1px solid black;
+                    padding: 2px 4px;
+
+                    &.error {
+                        font-weight: bold;
+                        color: red;
+                    }
+                    &.success {
+                        font-weight: bold;
+                        color: forestgreen;
+                    }
+                }
+
+                &:nth-child(even) {
+                    background: #f0fafa;
+                }
+            }
+        }
+
+        #table-ucs-list {
+            tr {
+                td {
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        #table-error-list {
+            tr {
+                td {
+                    table {
+                        margin: 0;
+                        border: 0;
+                        th {
+                            background: #02b45c;
+                            font-size: 1rem;
+                            padding: 1px 2px;
+                        }
+                        td {
+                            font-size: 0.9rem;
+                            padding: 1px 2px;
+                        }
+                    }
+                }
+                td:nth-child(1) {
                     text-align: center;
                 }
+                td:nth-child(2) {
+                    max-width: 400px;
+                }
+                // Reset Padding in cell which contains a table
+                td:nth-child(3) {
+                    padding: 0;
+                }
+            }
+        }
+
+        #close-report {
+            font-family: 'SAP', sans-serif;
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
+            font-size: 1.75rem;
+            color: #006BB4;
+            cursor: pointer;
+
+            &:hover {
+                color: #be1372;
+            }
+
+            &:active {
+                color: #be8c3f;
             }
         }
     }
 
-    #table-error-list {
-        tr {
-            td {
-                table {
-                    margin: 0;
-                    border: 0;
-                    th {
-                        background: #02b45c;
-                        font-size: 1rem;
-                        padding: 1px 2px;
-                    }
-                    td {
-                        font-size: 0.9rem;
-                        padding: 1px 2px;
-                    }
-                }
-            }
-            td:nth-child(1) {
-                text-align: center;
-            }
-            td:nth-child(2) {
-                max-width: 400px;
-            }
-            // Reset Padding in cell which contains a table
-            td:nth-child(3) {
-                padding: 0;
-            }
+    &-overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        rigth: 0;
+        z-index: 1000;
+
+        background: rgba(0, 0, 0, 0.50);
+
+
+        &.hidden {
+            display: none;
         }
+    }
+
+    &-dialogbox {
+
     }
 }

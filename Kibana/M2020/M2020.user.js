@@ -1,3 +1,26 @@
+/**
+ * Version: 1.0.1
+ *
+ * @author: Nicolas DUPRE (VISEO)
+ *
+ * ------------------------------------------------------------------------
+ *  Change Log :
+ * ------------------------------------------------------------------------
+ *  - Version 1.0.1 :
+ * ------------------------------------------------------------------------
+ *  • Add new element 'Overlay' for 'loading' (Not implemented).
+ *      - Including a dialog box for progress message.
+ *  • Add a cross button to close Monitoring Report.
+ *  • Change Processing Order for method 'display()' :
+ *      - Display only trigger data collection if there is no data to display
+ *      - Method 'collect' is now responsible of data consolidation.
+ *  • Rename button 'Collect' to 'M2020 UCS Check'
+ * ------------------------------------------------------------------------
+ *
+ * @return {M2020}
+ *
+ * @constructor
+ */
 function M2020 () {
     let self = this;
 
@@ -67,6 +90,10 @@ function M2020 () {
             expend: null,
             collect: null,
             display: null
+        },
+        overlay: {
+            root: null,
+            dialog: null
         },
         report: {
             root: null,
@@ -147,7 +174,7 @@ function M2020 () {
                             name: 'button',
                             classList: ['kuiLocalMenuItem'],
                             properties: {
-                                textContent: 'Collect',
+                                textContent: 'M2020 USC Check',
                                 onclick: self.collect
                             }
                         };
@@ -169,6 +196,26 @@ function M2020 () {
                         return self._htmlelements.menu.display = new HTML().compose(oDisplayButton);
                     }
                 }
+            },
+
+            overlay: function () {
+                // Making a dialog box to display progress status
+                let oDialogBox = {
+                    attributes: {
+                        id: "m2020-dialogbox"
+                    }
+                };
+                self._htmlelements.overlay.dialog = new HTML().compose(oDialogBox);
+
+                // Building overlay for loading process
+                let oOverlay = {
+                    attributes: {
+                        id: "m2020-overlay"
+                    },
+                    classList: ['hidden'],
+                    children: []
+                };
+                return self._htmlelements.overlay.root = new HTML().compose(oOverlay);
             },
 
             // Build Report (UCS List & Errors List)
@@ -210,6 +257,8 @@ function M2020 () {
                 let oReport = {
                     attributes: {id: 'm2020-report'},
                     children: [
+                        // Cross to close report
+                        {attributes: {id: 'close-report'}, properties: {innerHTML: '&#xe03e;', onclick: self.closeReport}},
                         // Caption
                         {name: 'h2', properties: {textContent: "UCS List"}},
                         // UCS Table
@@ -371,6 +420,9 @@ function M2020 () {
                 self._data.push(oRowData);
             }
         });
+
+        // Perform consolidation
+        self.consolidate();
     };
 
     /**
@@ -587,6 +639,7 @@ function M2020 () {
             // Recollect Data (table updated) + Update
             if (oLoadingElement.classList.contains('hidden')) {
                 self._consolidateData.ucs[$sUcs].resolved = true;
+                self.collect();
                 self.display();
             } else {
                 // Delay for retry
@@ -635,15 +688,14 @@ function M2020 () {
      */
     self.display = function () {
         // Collect filtered data
-        self.collect();
+        if(!self._data.length){
+            self.collect();
+        }
 
-        // Perform consolidation
-        let oData = self.consolidate();
+        let oData = self._consolidateData;
 
         // If report is already display, remove it
-        if (self._htmlelements.report.root) {
-            self._htmlelements.report.root.parentNode.removeChild(self._htmlelements.report.root);
-        }
+        self.closeReport();
 
         // (re) build reports
         self._hosts.document.appendChild(self.build().report());
@@ -660,6 +712,51 @@ function M2020 () {
             if(!oData.reports.errors.hasOwnProperty(sErrorPattern)) continue;
             let oError = oData.reports.errors[sErrorPattern];
             self._htmlelements.report.errors.appendChild(self.build().errorRow(oError))
+        }
+    };
+
+    /**
+     *
+     */
+    self.closeReport = function () {
+        // If report is already display, remove it
+        if (self._htmlelements.report.root) {
+            self._htmlelements.report.root.parentNode.removeChild(self._htmlelements.report.root);
+            self._htmlelements.report.root = null;
+        }
+    };
+
+    /**
+     * Overlay Manager
+     *
+     * @return {{toggle: toggle, off: off, on: on}}
+     */
+    self.overlay = function () {
+        return {
+            /**
+             * Enable / Disable overlay
+             */
+            toggle: function () {
+                if (self._htmlelements.overlay.root.classList.contains('hidden')) {
+                    self.overlay().on();
+                } else {
+                    self.overlay().off();
+                }
+            },
+
+            /**
+             * Turn On the overlay
+             */
+            on: function () {
+                self._htmlelements.overlay.root.classList.remove('hidden');
+            },
+
+            /**
+             * Turn Off the overlay
+             */
+            off: function () {
+                self._htmlelements.overlay.root.classList.add('hidden');
+            }
         }
     };
 
@@ -696,6 +793,9 @@ function M2020 () {
         oRefElement.parentNode.insertBefore(self.build().menu().expend(), oRefElement);
         oRefElement.parentNode.insertBefore(self.build().menu().collect(), oRefElement);
         oRefElement.parentNode.insertBefore(self.build().menu().display(), oRefElement);
+
+        // Build Overlay
+        self._hosts.document.appendChild(self.build().overlay());
 
         return self;
     };
