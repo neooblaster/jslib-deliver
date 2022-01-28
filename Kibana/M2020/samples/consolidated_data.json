@@ -1,0 +1,828 @@
+{
+    "id": [],
+    "ucs": {
+        "SE202204433850": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                0
+            ],
+            "resolved": false
+        },
+        "SF202203763318": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                1
+            ],
+            "resolved": false
+        },
+        "P0746554001": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                2
+            ],
+            "resolved": false
+        },
+        "DU202204691426": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                3
+            ],
+            "resolved": false
+        },
+        "XE202203269555": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                4
+            ],
+            "resolved": false
+        },
+        "SP202202019061": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                5,
+                7
+            ],
+            "resolved": false
+        },
+        "XE202203269071": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                6,
+                8
+            ],
+            "resolved": false
+        },
+        "SF202203764326": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                9,
+                18
+            ],
+            "resolved": false
+        },
+        "SF202203763452": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                10,
+                17
+            ],
+            "resolved": false
+        },
+        "SF202203763677": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                11
+            ],
+            "resolved": false
+        },
+        "3W202203227794": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                12
+            ],
+            "resolved": false
+        },
+        "XE202151266939": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                13
+            ],
+            "resolved": false
+        },
+        "XE202151266951": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                14,
+                15,
+                16
+            ],
+            "resolved": false
+        },
+        "P0790323001": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                19,
+                20
+            ],
+            "resolved": false
+        },
+        "P0793410001": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                21
+            ],
+            "resolved": false
+        },
+        "DU202204691438": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                22
+            ],
+            "resolved": false
+        },
+        "DU202204691628": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                23
+            ],
+            "resolved": false
+        },
+        "XE202151266945": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                24
+            ],
+            "resolved": false
+        },
+        "SE202204433989": {
+            "resolveStatus": "-",
+            "status": "ERROR",
+            "messages": [
+                25
+            ],
+            "resolved": false
+        }
+    },
+    "prodord": {
+        "30066588": {
+            "completeQuantity": 1,
+            "ucs": [
+                "P0746554001"
+            ]
+        },
+        "30070885": {
+            "completeQuantity": 1,
+            "ucs": [
+                "P0790323001"
+            ]
+        },
+        "30071583": {
+            "completeQuantity": 1,
+            "ucs": [
+                "XE202151266939",
+                "XE202151266951",
+                "XE202151266945"
+            ]
+        },
+        "30073585": {
+            "completeQuantity": 1,
+            "ucs": [
+                "P0793410001"
+            ]
+        },
+        "30074501": {
+            "completeQuantity": 4,
+            "ucs": [
+                "XE202203269071"
+            ]
+        },
+        "30075138": {
+            "completeQuantity": 1,
+            "ucs": [
+                "DU202204691438"
+            ]
+        },
+        "30076855": {
+            "completeQuantity": 3,
+            "ucs": [
+                "SP202202019061"
+            ]
+        },
+        "30077167": {
+            "completeQuantity": 1,
+            "ucs": [
+                "SE202204433850"
+            ]
+        },
+        "30077791": {
+            "completeQuantity": 6,
+            "ucs": [
+                "DU202204691426"
+            ]
+        },
+        "30077834": {
+            "completeQuantity": 1,
+            "ucs": [
+                "DU202204691628"
+            ]
+        },
+        "30078090": {
+            "completeQuantity": 3,
+            "ucs": [
+                "3W202203227794"
+            ]
+        },
+        "30078630": {
+            "completeQuantity": 3,
+            "ucs": [
+                "XE202203269555"
+            ]
+        },
+        "30078721": {
+            "completeQuantity": 1,
+            "ucs": [
+                "SE202204433989"
+            ]
+        },
+        "30078891": {
+            "completeQuantity": 3,
+            "ucs": [
+                "SF202203764326"
+            ]
+        },
+        "30078983": {
+            "completeQuantity": 1,
+            "ucs": [
+                "SF202203763452"
+            ]
+        },
+        "30081468": {
+            "completeQuantity": 1,
+            "ucs": [
+                "SF202203763677"
+            ]
+        },
+        "30081866": {
+            "completeQuantity": 1,
+            "ucs": [
+                "SF202203763318"
+            ]
+        }
+    },
+    "messages": [
+        {
+            "id": "AX6XtKQzmju3mRQnLj-E",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30077167 is already being processed by VERPSFI_ALE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30077167,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202204433850"
+        },
+        {
+            "id": "AX6Xh2Ynmju3mRQnLRsy",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30081866 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30081866,
+            "completeQuantity": 1,
+            "ucsNumber": "SF202203763318"
+        },
+        {
+            "id": "AX6Xh1Mtmju3mRQnLRrT",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30066588 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30066588,
+            "completeQuantity": 1,
+            "ucsNumber": "P0746554001"
+        },
+        {
+            "id": "AX6Xh1Gwmju3mRQnLRrG",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30077791 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30077791,
+            "completeQuantity": 6,
+            "ucsNumber": "DU202204691426"
+        },
+        {
+            "id": "AX6Xh0-Jmju3mRQnLRq8",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30078630 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30078630,
+            "completeQuantity": 3,
+            "ucsNumber": "XE202203269555"
+        },
+        {
+            "id": "AX6Xh0wemju3mRQnLRqh",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30076855 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30076855,
+            "completeQuantity": 3,
+            "ucsNumber": "SP202202019061"
+        },
+        {
+            "id": "AX6XhzDGmju3mRQnLRoi",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30074501 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30074501,
+            "completeQuantity": 4,
+            "ucsNumber": "XE202203269071"
+        },
+        {
+            "id": "AX6Xhyqxmju3mRQnLRoD",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30076855 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30076855,
+            "completeQuantity": 3,
+            "ucsNumber": "SP202202019061"
+        },
+        {
+            "id": "AX6XhxkNmju3mRQnLRmg",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30074501 is already being processed by KHATTABAM",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30074501,
+            "completeQuantity": 4,
+            "ucsNumber": "XE202203269071"
+        },
+        {
+            "id": "AX6W0KAYmju3mRQnJ4xa",
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000973720 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30078891,
+            "completeQuantity": 3,
+            "ucsNumber": "SF202203764326"
+        },
+        {
+            "id": "AX6Wz7M9X5tjddcuTlZL",
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000969296 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30078983,
+            "completeQuantity": 1,
+            "ucsNumber": "SF202203763452"
+        },
+        {
+            "id": "AX6WwSeKX5tjddcuTfCJ",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30081468 is already being processed by VERPSFI_ALE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30081468,
+            "completeQuantity": 1,
+            "ucsNumber": "SF202203763677"
+        },
+        {
+            "id": "AX6WuW7gmju3mRQnJtOt",
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000965308 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30078090,
+            "completeQuantity": 3,
+            "ucsNumber": "3W202203227794"
+        },
+        {
+            "id": "AX6Wm_YDmju3mRQnJf-I",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30071583 is already being processed by RAVINELVAL",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30071583,
+            "completeQuantity": 1,
+            "ucsNumber": "XE202151266939"
+        },
+        {
+            "id": "AX6Wm5m5mju3mRQnJfv4",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30071583 is already being processed by RAVINELVAL",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30071583,
+            "completeQuantity": 1,
+            "ucsNumber": "XE202151266951"
+        },
+        {
+            "id": "AX6Wm06Dmju3mRQnJfi6",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30071583 is already being processed by RAVINELVAL",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30071583,
+            "completeQuantity": 1,
+            "ucsNumber": "XE202151266951"
+        },
+        {
+            "id": "AX6Wmy8Dmju3mRQnJfep",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30071583 is already being processed by RAVINELVAL",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30071583,
+            "completeQuantity": 1,
+            "ucsNumber": "XE202151266951"
+        },
+        {
+            "id": "AX6Weoylmju3mRQnJQLN",
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000969296 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30078983,
+            "completeQuantity": 1,
+            "ucsNumber": "SF202203763452"
+        },
+        {
+            "id": "AX6WeW88mju3mRQnJPq0",
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000973720 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30078891,
+            "completeQuantity": 3,
+            "ucsNumber": "SF202203764326"
+        },
+        {
+            "id": "AX6WT8Wmmju3mRQnI9j9",
+            "returnCode": 999,
+            "returnMessage": "Error: Handling unit 1000973349 is not provided for goods receipt",
+            "messagePattern": "Error: Handling unit [0-9]+ is not provided for goods receipt",
+            "prodOrder": 30070885,
+            "completeQuantity": 1,
+            "ucsNumber": "P0790323001"
+        },
+        {
+            "id": "AX6WTx63mju3mRQnI9Ta",
+            "returnCode": 999,
+            "returnMessage": "Error:",
+            "messagePattern": "Error:",
+            "prodOrder": 30070885,
+            "completeQuantity": 1,
+            "ucsNumber": "P0790323001"
+        },
+        {
+            "id": "AX6WR287mju3mRQnI52n",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30073585 is already being processed by VERPSFI_ALE",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30073585,
+            "completeQuantity": 1,
+            "ucsNumber": "P0793410001"
+        },
+        {
+            "id": "AX6VefYgmju3mRQnHJ5C",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30075138 is already being processed by MENARDJO",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30075138,
+            "completeQuantity": 1,
+            "ucsNumber": "DU202204691438"
+        },
+        {
+            "id": "AX6VeQEtX5tjddcuQrbK",
+            "returnCode": 999,
+            "returnMessage": "Error: Order 30077834 is already being processed by MENARDJO",
+            "messagePattern": "Error: Order [0-9]+ is already being processed by [0-9]+",
+            "prodOrder": 30077834,
+            "completeQuantity": 1,
+            "ucsNumber": "DU202204691628"
+        },
+        {
+            "id": "AX6VVP9XX5tjddcuQX1f",
+            "returnCode": 999,
+            "returnMessage": "Error: Batch 0000428948 of material N80931 is already locked by VERPSFI_MII",
+            "messagePattern": "Error: Batch [0-9]+ of material N[0-9]+ is already locked by [0-9]+",
+            "prodOrder": 30071583,
+            "completeQuantity": 1,
+            "ucsNumber": "XE202151266945"
+        },
+        {
+            "id": "AX6VST5qX5tjddcuQQVU",
+            "returnCode": 999,
+            "returnMessage": "Error: com.sap.xmii.Illuminator.logging.LHException: com.sap.sql.exception.OpenSQLException: Transaction (Process ID 121) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. \\n\\tOpenSQLExceptionCategories: [TRANSIENT, TRANSACTION_ROLLBACK]",
+            "messagePattern": "Error: com.sap.xmii.Illuminator.logging.[0-9]+xception: com.sap.sql.exception.Open[0-9]+xception: Transaction (Process [0-9]+ [0-9]+) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. \\n\\tOpen[0-9]+xceptionCategories: [[0-9]+, [0-9]+]",
+            "prodOrder": 30078721,
+            "completeQuantity": 1,
+            "ucsNumber": "SE202204433989"
+        }
+    ],
+    "reports": {
+        "ucs": {
+            "SE202204433850": {
+                "ucs": "SE202204433850",
+                "prodOrder": 30077167,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "SF202203763318": {
+                "ucs": "SF202203763318",
+                "prodOrder": 30081866,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "P0746554001": {
+                "ucs": "P0746554001",
+                "prodOrder": 30066588,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "DU202204691426": {
+                "ucs": "DU202204691426",
+                "prodOrder": 30077791,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "XE202203269555": {
+                "ucs": "XE202203269555",
+                "prodOrder": 30078630,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "SP202202019061": {
+                "ucs": "SP202202019061",
+                "prodOrder": 30076855,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "XE202203269071": {
+                "ucs": "XE202203269071",
+                "prodOrder": 30074501,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "SF202203764326": {
+                "ucs": "SF202203764326",
+                "prodOrder": 30078891,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "SF202203763452": {
+                "ucs": "SF202203763452",
+                "prodOrder": 30078983,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "SF202203763677": {
+                "ucs": "SF202203763677",
+                "prodOrder": 30081468,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "3W202203227794": {
+                "ucs": "3W202203227794",
+                "prodOrder": 30078090,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "XE202151266939": {
+                "ucs": "XE202151266939",
+                "prodOrder": 30071583,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "XE202151266951": {
+                "ucs": "XE202151266951",
+                "prodOrder": 30071583,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "P0790323001": {
+                "ucs": "P0790323001",
+                "prodOrder": 30070885,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "P0793410001": {
+                "ucs": "P0793410001",
+                "prodOrder": 30073585,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "DU202204691438": {
+                "ucs": "DU202204691438",
+                "prodOrder": 30075138,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "DU202204691628": {
+                "ucs": "DU202204691628",
+                "prodOrder": 30077834,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "XE202151266945": {
+                "ucs": "XE202151266945",
+                "prodOrder": 30071583,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            },
+            "SE202204433989": {
+                "ucs": "SE202204433989",
+                "prodOrder": 30078721,
+                "status": "ERROR",
+                "resolveStatus": "-",
+                "resolved": false
+            }
+        },
+        "errors": {
+            "Error: Order [0-9]+ is already being processed by [0-9]+": {
+                "occurrences": 17,
+                "messages": [
+                    "Error: Order 30077167 is already being processed by VERPSFI_ALE",
+                    "Error: Order 30081866 is already being processed by KHATTABAM",
+                    "Error: Order 30066588 is already being processed by KHATTABAM",
+                    "Error: Order 30077791 is already being processed by KHATTABAM",
+                    "Error: Order 30078630 is already being processed by KHATTABAM",
+                    "Error: Order 30076855 is already being processed by KHATTABAM",
+                    "Error: Order 30074501 is already being processed by KHATTABAM",
+                    "Error: Order 30081468 is already being processed by VERPSFI_ALE",
+                    "Error: Order 30071583 is already being processed by RAVINELVAL",
+                    "Error: Order 30073585 is already being processed by VERPSFI_ALE",
+                    "Error: Order 30075138 is already being processed by MENARDJO",
+                    "Error: Order 30077834 is already being processed by MENARDJO"
+                ],
+                "messagesOccurrences": {
+                    "Error: Order 30077167 is already being processed by VERPSFI_ALE": 1,
+                    "Error: Order 30081866 is already being processed by KHATTABAM": 1,
+                    "Error: Order 30066588 is already being processed by KHATTABAM": 1,
+                    "Error: Order 30077791 is already being processed by KHATTABAM": 1,
+                    "Error: Order 30078630 is already being processed by KHATTABAM": 1,
+                    "Error: Order 30076855 is already being processed by KHATTABAM": 2,
+                    "Error: Order 30074501 is already being processed by KHATTABAM": 2,
+                    "Error: Order 30081468 is already being processed by VERPSFI_ALE": 1,
+                    "Error: Order 30071583 is already being processed by RAVINELVAL": 4,
+                    "Error: Order 30073585 is already being processed by VERPSFI_ALE": 1,
+                    "Error: Order 30075138 is already being processed by MENARDJO": 1,
+                    "Error: Order 30077834 is already being processed by MENARDJO": 1
+                },
+                "inputs": [
+                    {
+                        "prodOrder": 30077167,
+                        "completeQuantity": 1,
+                        "ucs": "SE202204433850"
+                    },
+                    {
+                        "prodOrder": 30081866,
+                        "completeQuantity": 1,
+                        "ucs": "SF202203763318"
+                    },
+                    {
+                        "prodOrder": 30066588,
+                        "completeQuantity": 1,
+                        "ucs": "P0746554001"
+                    },
+                    {
+                        "prodOrder": 30077791,
+                        "completeQuantity": 6,
+                        "ucs": "DU202204691426"
+                    },
+                    {
+                        "prodOrder": 30078630,
+                        "completeQuantity": 3,
+                        "ucs": "XE202203269555"
+                    },
+                    {
+                        "prodOrder": 30076855,
+                        "completeQuantity": 3,
+                        "ucs": "SP202202019061"
+                    },
+                    {
+                        "prodOrder": 30074501,
+                        "completeQuantity": 4,
+                        "ucs": "XE202203269071"
+                    },
+                    {
+                        "prodOrder": 30081468,
+                        "completeQuantity": 1,
+                        "ucs": "SF202203763677"
+                    },
+                    {
+                        "prodOrder": 30071583,
+                        "completeQuantity": 1,
+                        "ucs": "XE202151266939"
+                    },
+                    {
+                        "prodOrder": 30071583,
+                        "completeQuantity": 1,
+                        "ucs": "XE202151266951"
+                    },
+                    {
+                        "prodOrder": 30073585,
+                        "completeQuantity": 1,
+                        "ucs": "P0793410001"
+                    },
+                    {
+                        "prodOrder": 30075138,
+                        "completeQuantity": 1,
+                        "ucs": "DU202204691438"
+                    },
+                    {
+                        "prodOrder": 30077834,
+                        "completeQuantity": 1,
+                        "ucs": "DU202204691628"
+                    }
+                ]
+            },
+            "Error: Handling unit [0-9]+ is not provided for goods receipt": {
+                "occurrences": 6,
+                "messages": [
+                    "Error: Handling unit 1000973720 is not provided for goods receipt",
+                    "Error: Handling unit 1000969296 is not provided for goods receipt",
+                    "Error: Handling unit 1000965308 is not provided for goods receipt",
+                    "Error: Handling unit 1000973349 is not provided for goods receipt"
+                ],
+                "messagesOccurrences": {
+                    "Error: Handling unit 1000973720 is not provided for goods receipt": 2,
+                    "Error: Handling unit 1000969296 is not provided for goods receipt": 2,
+                    "Error: Handling unit 1000965308 is not provided for goods receipt": 1,
+                    "Error: Handling unit 1000973349 is not provided for goods receipt": 1
+                },
+                "inputs": [
+                    {
+                        "prodOrder": 30078891,
+                        "completeQuantity": 3,
+                        "ucs": "SF202203764326"
+                    },
+                    {
+                        "prodOrder": 30078983,
+                        "completeQuantity": 1,
+                        "ucs": "SF202203763452"
+                    },
+                    {
+                        "prodOrder": 30078090,
+                        "completeQuantity": 3,
+                        "ucs": "3W202203227794"
+                    },
+                    {
+                        "prodOrder": 30070885,
+                        "completeQuantity": 1,
+                        "ucs": "P0790323001"
+                    }
+                ]
+            },
+            "Error:": {
+                "occurrences": 1,
+                "messages": [
+                    "Error:"
+                ],
+                "messagesOccurrences": {
+                    "Error:": 1
+                },
+                "inputs": [
+                    {
+                        "prodOrder": 30070885,
+                        "completeQuantity": 1,
+                        "ucs": "P0790323001"
+                    }
+                ]
+            },
+            "Error: Batch [0-9]+ of material N[0-9]+ is already locked by [0-9]+": {
+                "occurrences": 1,
+                "messages": [
+                    "Error: Batch 0000428948 of material N80931 is already locked by VERPSFI_MII"
+                ],
+                "messagesOccurrences": {
+                    "Error: Batch 0000428948 of material N80931 is already locked by VERPSFI_MII": 1
+                },
+                "inputs": [
+                    {
+                        "prodOrder": 30071583,
+                        "completeQuantity": 1,
+                        "ucs": "XE202151266945"
+                    }
+                ]
+            },
+            "Error: com.sap.xmii.Illuminator.logging.[0-9]+xception: com.sap.sql.exception.Open[0-9]+xception: Transaction (Process [0-9]+ [0-9]+) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. \\n\\tOpen[0-9]+xceptionCategories: [[0-9]+, [0-9]+]": {
+                "occurrences": 1,
+                "messages": [
+                    "Error: com.sap.xmii.Illuminator.logging.LHException: com.sap.sql.exception.OpenSQLException: Transaction (Process ID 121) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. \\n\\tOpenSQLExceptionCategories: [TRANSIENT, TRANSACTION_ROLLBACK]"
+                ],
+                "messagesOccurrences": {
+                    "Error: com.sap.xmii.Illuminator.logging.LHException: com.sap.sql.exception.OpenSQLException: Transaction (Process ID 121) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. \\n\\tOpenSQLExceptionCategories: [TRANSIENT, TRANSACTION_ROLLBACK]": 1
+                },
+                "inputs": [
+                    {
+                        "prodOrder": 30078721,
+                        "completeQuantity": 1,
+                        "ucs": "SE202204433989"
+                    }
+                ]
+            }
+        }
+    }
+}

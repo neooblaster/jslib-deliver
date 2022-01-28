@@ -25,6 +25,21 @@ function M2020 () {
     let self = this;
 
     /**
+     * Automatically search message for each UCS found in Error to resolve them.
+     * @type {boolean}
+     * @private
+     */
+    self._bAutoResolve = true;
+
+    /**
+     * Indicates if a resolution of UCS is in progress.
+     * @type {boolean}
+     * @private
+     */
+    self._bResolvingUCS = false;
+
+
+    /**
      * Indicates if log details are expanded by M2020.
      * @type {boolean}
      * @private
@@ -597,6 +612,41 @@ function M2020 () {
             }
         }
 
+        // Auto Resolving UCS
+        if (self._bAutoResolve) {
+            var interval = setInterval(function () {
+                let bAutoResolveDone = false;
+                let sUCSToResolve = null;
+
+                // Trigger a UCS Resolution if their is no resolution in progress
+                if (!self._bResolvingUCS) {
+                    // Search for an unresolved UCS
+                    for (let sUCS in self._consolidateData.ucs) {
+                        if(!self._consolidateData.ucs.hasOwnProperty(sUCS)) continue;
+
+                        if (!self._consolidateData.ucs[sUCS].resolved) {
+                            sUCSToResolve = sUCS;
+                            break;
+                        }
+                    }
+
+                    // If UCS Number has found, start resolution
+                    if (sUCSToResolve) {
+                        self.resolveUCS(sUCSToResolve);
+                    } else {
+                        bAutoResolveDone = true;
+                    }
+                }
+
+                // Auto resolution finished
+                if (bAutoResolveDone) {
+                    clearInterval(interval);
+                    // Return to the initial search
+                    document.location.href = self._responseLocation;
+                }
+            }, 100);
+        }
+
         return self._consolidateData;
     };
 
@@ -625,6 +675,9 @@ function M2020 () {
             sNewLocation = sNewLocation.replace(/999/g, $sUcs);
             document.location.href = sNewLocation;
 
+            // Indicates resolving is in progress
+            self._bResolvingUCS = true;
+
             // Delay execution for waiting loading
             setTimeout(function () {
                 self.resolveUCS.call(this, $sUcs, false);
@@ -641,6 +694,8 @@ function M2020 () {
                 self._consolidateData.ucs[$sUcs].resolved = true;
                 self.collect();
                 self.display();
+                // Resolution is finished
+                self._bResolvingUCS = false;
             } else {
                 // Delay for retry
                 setTimeout(function () {
