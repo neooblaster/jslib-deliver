@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="parenthesisParser.js" ></script>
+    <script>
+        function run() {
+            let a = {};
+
+            // console.log(ParenthesisParser.parse("(columns:!(_source),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:AW35DAbv8VOwPLJzbS0C,key:apiName,negate:!f,params:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase),type:phrase,value:SAP_TTAGREGATIONUCSCOMPLETE),query:(match:(apiName:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase)))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:AW35DAbv8VOwPLJzbS0C,key:response,negate:!f,params:(query:'999',type:phrase),type:phrase,value:'999'),query:(match:(response:(query:'999',type:phrase))))),index:AW35DAbv8VOwPLJzbS0C,interval:auto,query:(language:kuery,query:''),sort:!(creationDate,desc))"));
+
+            // parenthesisParser("(columns:(c:3),filter:((a:1),(b:2)))", a);
+            // parenthesisParser("(filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:AW35DAbv8VOwPLJzbS0C,key:apiName,negate:!f,params:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase),type:phrase,value:SAP_TTAGREGATIONUCSCOMPLETE),query:(match:(apiName:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase)))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:AW35DAbv8VOwPLJzbS0C,key:response,negate:!f,params:(query:'999',type:phrase),type:phrase,value:'999'),query:(match:(response:(query:'999',type:phrase))))),index:AW35DAbv8VOwPLJzbS0C)");
+            // console.log(a);
+
+
+            console.log("STRINGIFIED:", ParenthesisParser.stringify(ParenthesisParser.parse("(columns:!(_source),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:AW35DAbv8VOwPLJzbS0C,key:apiName,negate:!f,params:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase),type:phrase,value:SAP_TTAGREGATIONUCSCOMPLETE),query:(match:(apiName:(query:SAP_TTAGREGATIONUCSCOMPLETE,type:phrase)))),('$state':(store:appState),meta:(alias:!n,disabled:!f,index:AW35DAbv8VOwPLJzbS0C,key:response,negate:!f,params:(query:Mediator,type:phrase),type:phrase,value:Mediator),query:(match:(response:(query:Mediator,type:phrase))))),index:AW35DAbv8VOwPLJzbS0C,interval:auto,query:(language:kuery,query:''),sort:!(creationDate,desc))")));
+        }
+
+        run();
+
+        var bReload = true;
+        setTimeout(function(){if(bReload)document.location.reload();}, 2000);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

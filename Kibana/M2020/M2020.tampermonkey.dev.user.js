@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kibana Monitoring Script DEV
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
+// @version      1.1.0
 // @description  Automation of Manuf 2020 Log Monitoring
 // @author       You
 // @match        https://kibana.xxx.net:5601/s/integration/app/*
@@ -14,6 +14,7 @@
 // @require      https://cdn.jsdelivr.net/npm/less@4.1.1
 // @require      https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/4.0.0-beta.8/fxparser.min.js
 // @require      file://C:\Users\dupreni\Desktop\jslib\Kibana\M2020\M2020.user.js
+// @require      file://C:\Users\dupreni\Desktop\jslib\Common\ParenthesisParser\ParenthesisParser.js
 // ==/UserScript==
 (function() {
     'use strict';
@@ -21,6 +22,7 @@
     // Bridging Resources
     window.HTML = HTML;
     window.fxparser = fxparser;
+    window.ParenthesisParser = ParenthesisParser;
 
     // Local functions
     function isLoaded () {
@@ -38,7 +40,7 @@
                     rel: 'stylesheet/less',
                     type: 'text/css',
                     //href: `https://raw.githubusercontent.com/neooblaster/jslib-deliver/master/Kibana/M2020/stylesheet.less?ts=${new Date().getTime()}1`
-                    // Requiret Web Server for Chrome
+                    // Requiet Web Server for Chrome
                     href: `http://127.0.0.1:8887/stylesheet.less`
                 },
                 properties: {
