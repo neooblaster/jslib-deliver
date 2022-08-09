@@ -1,10 +1,15 @@
 /**
- * Version: 2.0.0
+ * Version: 2.0.1
  *
  * @author: Nicolas DUPRE (VISEO)
  *
  * ------------------------------------------------------------------------
  *  Change Log :
+ * ------------------------------------------------------------------------
+ *  - Version 2.0.1 : 2022.08.09
+ * ------------------------------------------------------------------------
+ *  • Fix method isNot() where negate properties has the wrong value.
+ *
  * ------------------------------------------------------------------------
  *  - Version 2.0.0 : 2022.08.08
  * ------------------------------------------------------------------------
@@ -1229,7 +1234,7 @@ function M2020 () {
                                 let oObject = Object.assign(oTemplate, {});
 
                                 oObject.meta.key = $sKey;
-                                oObject.meta.negate = "!f";
+                                oObject.meta.negate = "!t";
                                 oObject.meta.value = $sValue;
                                 oObject.meta.params.query = $sValue;
                                 oObject.query.match[$sKey] = {
