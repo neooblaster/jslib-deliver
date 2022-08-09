@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kibana Monitoring Script
 // @namespace    http://tampermonkey.net/
-// @version      1.1.1
+// @version      1.1.2
 // @description  Automation of Manuf 2020 Log Monitoring
 // @author       You
 // @match        https://kibana.xxx:5601/s/integration/app/*
@@ -13,7 +13,7 @@
 // @require      https://rawcdn.githack.com/neooblaster/HTML/aa9263b08705a9676416f2ba64b474daa3a62945/release/v1.4.0/HTML.min.js
 // @require      https://cdn.jsdelivr.net/npm/less@4.1.1
 // @require      https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/4.0.0-beta.8/fxparser.min.js
-// @require      https://cdn.jsdelivr.net/gh/neooblaster/jslib-deliver@master/Kibana/M2020/M2020..user.js
+// @require      https://cdn.jsdelivr.net/gh/neooblaster/jslib-deliver@master/Kibana/M2020/M2020.user.js
 // @require      https://cdn.jsdelivr.net/gh/neooblaster/jslib-deliver@master/Common/ParenthesisParser/ParenthesisParser.js
 // ==/UserScript==
 (function() {
