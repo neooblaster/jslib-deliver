@@ -8,7 +8,7 @@
  *
  * Comment : I simply rearrange methods & implementation to extend Object
  */
-function ObjectAssignDeep (){
+function ObjectAssignDeep ($bMerge = false){
     let self = this;
 
     self.cloneValue = function (value) {
@@ -63,6 +63,8 @@ function ObjectAssignDeep (){
             arrayBehaviour: _options.arrayBehaviour || 'replace',  // Can be "merge" or "replace".
         };
 
+        // debugger;
+
         // Ensure we have actual objects for each.
         const objects = _objects.map(object => object || {});
         const output = target || {};
@@ -112,16 +114,30 @@ function ObjectAssignDeep (){
         return self.executeDeepMerge($target, $objects);
     };
 
-    return self.objectAssignDeep;
+    self.objectAssignDeepMerge = function($target, ...$objects){
+        return self.executeDeepMerge($target, $objects, {arrayBehaviour: 'merge'});
+    }
+
+    if($bMerge){
+        return self.objectAssignDeepMerge;
+    } else {
+        return self.objectAssignDeep;
+    }
 }
 
 // Using .prototype will break component loading...
 // I suppose it's due to enumerate the new property
 // By defineProperties, we set the new method as no unemrable
 Object.defineProperties(Object, {
-  assignDeep: {
-    enumerable: false,
-    writable: false,
-    value: new ObjectAssignDeep()
-  }
+    assignDeep: {
+        enumerable: false,
+        writable: false,
+        value: new ObjectAssignDeep()
+    },
+
+    assignDeepMerge: {
+        enumerable: false,
+        writable: false,
+        value: new ObjectAssignDeep(true)
+    }
 });
